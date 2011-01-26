@@ -1,0 +1,34 @@
+"benecurrit.py" README file
+
+benecurrit makes sensible decisions about which directory entries (in
+the path list "PATH" used to find commands) --we call such path entries
+in a list 'pathels' for 'path elements'-- to keep, and which ones to
+discard. benecurrit also finds architecture-specific (see uname (1))
+directories under /usr/local and /opt on the x86 platform (TODO: extend
+the detection to other possibilites) which have a "bin/" subdirectory,
+and prepends such <ARCH>/bin pathels to the PATH list.
+
+This program is offerred under the terms of the GPL v2 or later and no
+warranty, express or implied, is given. The user assumes all risks and
+responsibilities regarding execution of this code on her/his system.
+
+benecurrit.py was first placed on github on Wed 01/26/2011 17:10 UTC
+and may undergo significant developmental changes in the future.
+
+The author is Sören Andersen and can be reached at <somian ZERO-EIGHT
+ -AT- gmail DotCom> ...the author was, at the time this program was
+written, exerting himself to renew his rusty acquaintance with the
+Python language and extend his knowledge of python. The goal was to
+write a useful tool using python.
+
+When starting a bash shell under the author's primary daily use
+GNU/Linux desktop, running a Debian-like distro, the file ~/.bashrc is
+used as a bash "init file". The .bashrc file the author uses contains
+this line:
+
+    PATH=$($HOME/bin/benecurrit.py 2>/dev/null)
+
+Other uses of this program may suggest themselves to imaginative
+persons. In general this is a tool written with code developers in mind.
+
+Last modified: Wednesday 01/26/2011 17:11 UTC
